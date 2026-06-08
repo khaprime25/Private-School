@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #111111;
+    --secondary: #444444;
+    --light: #f5f5f5;
+    --border: #e5e5e5;
+    --white: #ffffff;
+    --accent: #eebf26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--primary);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    transform: translateY(-100%);
+    transition: .3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav.active {
+    transform: translateY(0);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.navbar a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu i,
+.menu a i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary);
+    transition: .3s;
+}
+
+.menu i:hover,
+.menu a i:hover {
+    color: var(--accent);
+}
+
+.login-form {
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    width: 280px;
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: .3s ease;
+}
+
+.login-form.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.login-form h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-box {
+    width: 100%;
+    padding: .6rem;
+    margin: .5rem 0;
+    border: 1px solid var(--border);
+    outline: none;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+}
+
+.btn {
+    width: 100%;
+    padding: .6rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background: var(--primary);
+    color: var(--white);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: .8rem;
+}
+
+.links a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* Home Section */
+
+.home {
+    height: 100vh;
+    background: url("../Images/home.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.home-content {
+    position: relative;
+    max-width: 800px;
+    color: var(--white);
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.home-content p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.home-btns {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home .btn {
+    padding: .8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s ease;
+    display: inline-block;
+}
+
+.home .primary {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.home .primary:hover {
+    background: #b08d1f;
+    transform: translateY(-2px);
+}
+
+.home .outline {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.home .outline:hover {
+    background: var(--white);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* About Section */
+
+.about {
+    padding: 3rem 2rem;
+    background: var(--white);
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about .about-box {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about .about-img {
+    flex: 1;
+}
+
+.about .about-img img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about .about-text {
+    flex: 1;
+}
+
+.about .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.about .about-text p {
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.about .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: var(--dark);
+}
+
+.about .year-switch {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+.about .year-btn {
+    padding: .5rem 1rem;
+    border: 1px solid #ddd;
+    background: transparent;
+    cursor: pointer;
+    font-size: .9rem;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+.about .year-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.about .year-btn.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ================= STUDENT GRID ================= */
+
+.about .student-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* CARD */
+.about .student-card {
+    background: var(--light);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: .3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about .student-card:hover {
+    transform: translateY(-5px);
+}
+
+.about .student-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.about .student-info {
+    padding: 1rem;
+}
+
+.about .student-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: .3rem;
+}
+
+.about .student-info p {
+    font-size: .9rem;
+    color: var(--gray);
+    margin-bottom: .5rem;
+}
+
+.about .student-info ul {
+    list-style: none;
+    font-size: .85rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* ================= SHOW CONTROLS ================= */
+
+
+/* BUTTON CONTAINER */
+.about .show-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+/* BASE BUTTON */
+.about .btn {
+    padding: .4rem .9rem;
+    font-size: .85rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/* SMALL FIXED WIDTH BUTTON */
+.about .btn.small {
+    width: 200px;
+}
+
+/* OUTLINE BUTTON */
+.about .btn.outline {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+/* OUTLINE HOVER */
+.about .btn.outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* NORMAL BUTTON */
+.about .btn:not(.outline) {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.about .btn:not(.outline):hover {
+    background: var(--accent);
+}
+
+/* PRIMARY BUTTON */
+.about .btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.about .btn:hover {
+    background: var(--accent);
+}
+
+/* ================= STATS SECTION ================= */
+
+.about .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.about .stat-card {
+    background: var(--light);
+    padding: 1.2rem;
+    text-align: center;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.about .stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.about .stat-card h3 {
+    font-size: 1.8rem;
+    color: var(--dark);
+}
+
+.about .stat-card p {
+    font-size: .85rem;
+    color: var(--gray);
+}
+
+.about .stat-card.highlight h3 {
+    color: var(--accent);
+}
+
+@media (max-width: 991px) {
+
+    .nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar a {
+        margin: 0 .7rem;
+        font-size: .95rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .menu i,
+    .menu a i {
+        font-size: 1.1rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .student-grid {
+        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        display: none;
+        padding: 1rem 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: .8rem 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .login-form {
+        right: 1rem;
+        width: 260px;
+    }
+
+    .menu {
+        gap: .8rem;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: .95rem;
+    }
+
+    .home-btns {
+        flex-direction: column;
+    }
+
+    .show-controls {
+        flex-direction: column;
+    }
+
+    .about .student-grid {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .about .show-controls {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about .btn.small {
+        width: 160px;
+    }
+
+    .about .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about .show-controls {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .nav {
+        padding: .8rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        gap: .4rem;
+    }
+
+    .navbar a {
+        font-size: .95rem;
+    }
+
+    .menu i,
+    .menu a i {
+        font-size: 1rem;
+    }
+
+    .login-form {
+        right: .5rem;
+        left: .5rem;
+        width: auto;
+    }
+
+    .btn {
+        font-size: .9rem;
+    }
+
+    .home-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .home-content p {
+        font-size: .9rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about .btn.small {
+        width: 140px;
+    }
+
+    .about .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .about .about-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about .section-title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naung Yoe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navbar Section Starts -->
+    <header>
+        <div class="nav">
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Naung Yoe</span>
+            </div>
+
+            <!-- Navbar Links -->
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="menu">
+                <a href="#achievement"><i class="fa-solid fa-trophy"></i></a>
+                <a href="#facilities"><i class="fa-solid fa-school"></i></a>
+                <a href="#teachers"><i class="fa-solid fa-chalkboard-user"></i></a>
+                <i class="fa-solid fa-user" id="login-btn"></i>
+                <i class="fa-solid fa-bars" id="menu-btn"></i>
+            </div>
+
+            <!-- Login Form -->
+            <form class="login-form">
+                <h3>Student Login</h3>
+                <input type="email" placeholder="Email" class="input-box">
+                <input type="password" placeholder="Password" class="input-box">
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button class="btn">Sign In</button>
+                <div class="links">
+                    <a href="#">Forgot password?</a>
+                    <a href="#">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </header>
+    <!-- Header Navbar Section Ends -->
+
+
+    <!-- Home Section Starts -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h1>Once a Naung Yoe Student,<br>Always a Naung Yoe Student</h1>
+            <p>Welcome to Naung Yoe Private School, where excellence, discipline, and lifelong learning shape the future
+                of every student.</p>
+            <div class="home-btns">
+                <a href="#about" class="btn primary">Explore School</a>
+                <a href="#contact" class="btn outline">Contact Us</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- Home Section Ends -->
+
+
+    <!-- About Section Starts -->
+    <section class="about" id="about">
+
+        <div class="container">
+            <!-- About section-->
+            <div class="about-box">
+                <div class="about-img">
+                    <img src="../Images/school.png" alt="School">
+                </div>
+
+                <div class="about-text">
+                    <h2>About Naung Yoe Private School</h2>
+                    <p>A disciplined learning environment focused on academic excellence and student success.</p>
+                    <p>We guide students from foundation to distinction with structured teaching systems.</p>
+                </div>
+            </div>
+
+            <!-- Student Section -->
+            <div class="achievement" id="achievement">
+
+                <h2 class="section-title">Academic Achievements</h2>
+                <div class="year-switch">
+                    <button class="year-btn active" data-year="2025">2025</button>
+                    <button class="year-btn" data-year="2024">2024</button>
+                    <button class="year-btn" data-year="2023">2023</button>
+                    <button class="year-btn" data-year="2022">2022</button>
+                    <button class="year-btn" data-year="2021">2021</button>
+                </div>
+
+                <div class="stats"></div>
+
+                <h2 class="section-title">Outstanding 6D Scholars</h2>
+                <div class="student-grid" id="studentGrid"></div>
+
+                <div class="show-controls">
+                    <button id="showMoreBtn" class="btn small">Show More</button>
+                    <button id="showLessBtn" class="btn outline small">Show Less</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- About Section Ends -->
+
+
+    <!-- Dummy section for scroll test -->
+    <section style="height:200vh; padding-top:120px;" id="home">
+        <h1 style="text-align:center;">Home Section</h1>
+    </section>
+
+
+    <script src=" script.js"></script>
+</body>
+
+</html>
