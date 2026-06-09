@@ -17,6 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -103,7 +104,6 @@ header {
     padding: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -177,7 +177,7 @@ header {
 
 .home {
     height: 100vh;
-    background: url("../Images/home.jpg") center/cover no-repeat;
+    background: url("../Images/home.png") center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -717,14 +717,14 @@ header {
 .program-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .program-card {
     position: relative;
     background: var(--white);
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 1rem;
     border-radius: 16px;
     /* border: 2px solid var(--primary); */
     box-shadow: var(--box-shadow);
@@ -737,7 +737,7 @@ header {
 
 .program-card h4 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .program-card ul {
@@ -1023,14 +1023,14 @@ header {
 }
 
 .contact {
-    padding: 6rem 2rem;
+    padding: 2rem;
     background: var(--light);
 }
 
 .contact .section-heading {
     text-align: center;
     max-width: 750px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2rem;
 }
 
 .contact .section-heading span {
@@ -1142,6 +1142,105 @@ header {
     background: #111111;
 }
 
+.footer {
+    background: var(--primary);
+    color: var(--white);
+    padding-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 0 2rem 4rem;
+}
+
+.footer-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-box p {
+    color: rgba(255, 255, 255, .75);
+    line-height: 1.8;
+}
+
+.footer-box a {
+    display: block;
+    color: rgba(255, 255, 255, .75);
+    margin-bottom: .9rem;
+    transition: .3s;
+}
+
+.footer-box a:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo i {
+    color: var(--primary);
+}
+
+.footer-logo span {
+    color: var(--white);
+}
+
+.footer-motto {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary);
+    color: rgba(255, 255, 255, .9);
+    font-style: italic;
+}
+
+.footer-box p i {
+    margin-right: .5rem;
+    color: var(--primary);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .1);
+    margin-bottom: 0;
+}
+
+.footer-social a:hover {
+    transform: translateY(-4px);
+    background: var(--primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, .7);
+}
+
 @media (max-width: 991px) {
 
     .nav {
@@ -1240,6 +1339,10 @@ header {
 
     .contact-card {
         padding: 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1433,6 +1536,14 @@ header {
         width: 100%;
     }
 
+    .footer {
+        padding-top: 4rem;
+    }
+
+    .footer-container {
+        gap: 2rem;
+        padding: 0 1rem 3rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1597,6 +1708,26 @@ header {
     }
 
     .contact-note {
+        font-size: .9rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    .footer-box h3 {
+        margin-bottom: 1rem;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+
+    .footer-bottom p {
         font-size: .9rem;
     }
 }
