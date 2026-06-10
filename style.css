@@ -250,53 +250,56 @@ header {
 
 /* About Section */
 
-.about {
-    padding: 2rem;
-    background: var(--white);
-}
-
-.about .container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.about .about-box {
-    display: flex;
-    align-items: center;
+.about-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    margin-bottom: 2rem;
+    align-items: center;
+    background: var(--light);
+    margin-bottom: 3rem;
+    padding: 0 4rem;
+    padding-top: 4rem;
 }
 
-.about .about-img {
-    flex: 1;
-}
-
-.about .about-img img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-.about .about-text {
-    flex: 1;
-}
-
-.about .about-text h2 {
-    font-size: 2rem;
+.about-text h2 {
+    text-align: center;
     margin-bottom: 1rem;
-    color: var(--dark);
 }
 
-.about .about-text p {
+.about-text p {
     color: var(--gray);
-    line-height: 1.7;
+    line-height: 1.4;
     margin-bottom: 1rem;
+}
+
+.school-address {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.school-address h4 {
+    margin-bottom: .8rem;
+}
+
+.school-address i {
+    color: var(--primary);
+    margin-right: .5rem;
+}
+
+.about-map iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
 }
 
 .section-title {
     text-align: center;
     font-size: 2rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
     color: var(--dark);
 }
 
@@ -305,7 +308,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: .5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .about .year-btn {
@@ -332,6 +335,7 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+    padding: 1rem 2.5rem;
 }
 
 .about .student-card {
@@ -382,7 +386,7 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    margin-top: 1.5rem;
+    margin: 1rem 2.5rem;
 }
 
 .about .btn {
@@ -435,10 +439,11 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-top: 3rem;
+    padding: 1rem 2rem;
 }
 
 .about .stat-card {
-    background: var(--light);
+    background: var(--white);
     padding: 1.2rem;
     text-align: center;
     border-radius: 12px;
@@ -1270,8 +1275,7 @@ header {
     }
 
     .about-box {
-        flex-direction: column;
-        text-align: center;
+        gap: 2rem;
     }
 
     .about .student-grid {
@@ -1397,6 +1401,14 @@ header {
 
     .show-controls {
         flex-direction: column;
+    }
+
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+
+    .about-map {
+        order: -1;
     }
 
     .about .student-grid {
@@ -1591,6 +1603,14 @@ header {
 
     .about .btn.small {
         width: 140px;
+    }
+
+    .about-map iframe {
+        height: 300px;
+    }
+
+    .school-address {
+        padding: 1rem;
     }
 
     .about .stats {
